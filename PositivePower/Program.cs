@@ -1,22 +1,22 @@
-﻿class Program
-{
-    static void Main(string[] args)
-    {
-        Console.Write("Ingrese un número: ");
-        int numero = Convert.ToInt32(Console.ReadLine());
+﻿using System;
 
-        if (numero > 0)
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Ingrese el primer número: ");
+        int num1 = int.Parse(Console.ReadLine() ?? "0");
+
+        Console.Write("Ingrese el segundo número: ");
+        int num2 = int.Parse(Console.ReadLine() ?? "0");
+
+        if (num1 > num2)
         {
-            int resultado = numero * numero; // elevar al cuadrado
-            Console.WriteLine("Resultado: " + resultado);
+            Console.WriteLine($"Resultado: {num1 * 2}");
         }
-        else if (numero < 0)
+        else
         {
-            Console.WriteLine("Resultado: Número negativo.");
-        }
-        else // cuando es 0
-        {
-            Console.WriteLine("Resultado: 0");
+            Console.WriteLine($"Resultado: {num2 * 3}");
         }
     }
 }
