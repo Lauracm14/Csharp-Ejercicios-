@@ -3,19 +3,23 @@
     static void Main()
     {
         Console.WriteLine("Ingrese el primer número:");
-        double num1 = double.Parse(Console.ReadLine() ?? "0");
+        int num1 = int.Parse(Console.ReadLine() ?? "0");
 
         Console.WriteLine("Ingrese el segundo número:");
-        double num2 = double.Parse(Console.ReadLine() ?? "0");
+        int num2 = int.Parse(Console.ReadLine() ?? "0");
 
         Console.WriteLine("Ingrese el tercer número:");
-        double num3 = double.Parse(Console.ReadLine() ?? "0");
+        int num3 = int.Parse(Console.ReadLine() ?? "0");
 
         Console.WriteLine("Ingrese el cuarto número:");
-        double num4 = double.Parse(Console.ReadLine() ?? "0");
+        int num4 = int.Parse(Console.ReadLine() ?? "0");
 
-        double promedio = (num1 + num2 + num3 + num4) / 4;
+        Console.WriteLine("Ingrese el quinto número:");
+        int num5 = int.Parse(Console.ReadLine() ?? "0");
 
-        Console.WriteLine($"Resultado: {promedio}");
+        // Encontrar el más pequeño usando Math.Min
+        int menor = Math.Min(num1, Math.Min(num2, Math.Min(num3, Math.Min(num4, num5))));
+
+        Console.WriteLine($"Resultado: {menor}");
     }
 }
