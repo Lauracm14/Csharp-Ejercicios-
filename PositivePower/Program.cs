@@ -2,18 +2,11 @@
 {
     static void Main()
     {
-        Console.Write("Ingrese un número: ");
-        int num = int.Parse(Console.ReadLine() ?? "0");
+        Console.Write("Ingrese el radio del círculo: ");
+        double radio = double.Parse(Console.ReadLine() ?? "0");
 
-        if (num > 0)
-        {
-            double raiz = Math.Sqrt(num);
-            Console.WriteLine($"Resultado: {raiz}");
-        }
-        else
-        {
-            int cuadrado = num * num;
-            Console.WriteLine($"Resultado: {cuadrado}");
-        }
+        double perimetro = 2 * Math.PI * radio;
+
+        Console.WriteLine($"Resultado: {perimetro:F2}");
     }
 }
