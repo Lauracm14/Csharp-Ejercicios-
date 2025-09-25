@@ -1,22 +1,19 @@
-﻿using System;
-
-class Program
+﻿class Program
 {
     static void Main()
     {
-        Console.Write("Ingrese el primer número: ");
-        int num1 = int.Parse(Console.ReadLine() ?? "0");
+        Console.Write("Ingrese un número: ");
+        int num = int.Parse(Console.ReadLine() ?? "0");
 
-        Console.Write("Ingrese el segundo número: ");
-        int num2 = int.Parse(Console.ReadLine() ?? "0");
-
-        if (num1 > num2)
+        if (num > 0)
         {
-            Console.WriteLine($"Resultado: {num1 * 2}");
+            double raiz = Math.Sqrt(num);
+            Console.WriteLine($"Resultado: {raiz}");
         }
         else
         {
-            Console.WriteLine($"Resultado: {num2 * 3}");
+            int cuadrado = num * num;
+            Console.WriteLine($"Resultado: {cuadrado}");
         }
     }
 }
