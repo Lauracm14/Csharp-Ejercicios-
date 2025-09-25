@@ -2,29 +2,18 @@
 {
     static void Main()
     {
-        Console.Write("Ingrese un número entre 1 y 7: ");
-        int dia = int.Parse(Console.ReadLine() ?? "0");
+        Console.Write("Ingrese su salario anual: ");
+        double salario = double.Parse(Console.ReadLine() ?? "0");
 
-        switch (dia)
+        if (salario > 12000)
         {
-            case 1:
-                Console.WriteLine("Lunes");
-                break;
-            case 2:
-                Console.WriteLine("Martes");
-                break;
-            case 3:
-                Console.WriteLine("Miércoles");
-                break;
-            case 4:
-                Console.WriteLine("Jueves");
-                break;
-            case 5:
-                Console.WriteLine("Viernes");
-                break;
-            default:
-                Console.WriteLine("Número fuera del rango laboral.");
-                break;
+            double excedente = salario - 12000;
+            double impuesto = excedente * 0.15;
+            Console.WriteLine($"Resultado: {impuesto}");
+        }
+        else
+        {
+            Console.WriteLine("No debe impuestos.");
         }
     }
 }
