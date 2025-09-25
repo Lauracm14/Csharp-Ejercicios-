@@ -2,21 +2,16 @@
 {
     static void Main()
     {
-        Console.WriteLine("Ingrese una palabra:");
-        string palabra = Console.ReadLine() ?? "";
+        Console.WriteLine("Ingrese un número:");
+        int num = int.Parse(Console.ReadLine() ?? "0");
 
-        // Contador de vocales
-        int contador = 0;
-        string vocales = "aeiouáéíóúAEIOUÁÉÍÓÚ";
+        long factorial = 1;
 
-        foreach (char letra in palabra)
+        for (int i = 1; i <= num; i++)
         {
-            if (vocales.Contains(letra))
-            {
-                contador++;
-            }
+            factorial *= i;
         }
 
-        Console.WriteLine($"Número de vocales: {contador}");
+        Console.WriteLine($"Resultado: {factorial}");
     }
 }
