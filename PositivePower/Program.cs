@@ -5,13 +5,13 @@
         Console.WriteLine("Ingrese un número:");
         int num = int.Parse(Console.ReadLine() ?? "0");
 
-        long factorial = 1;
-
-        for (int i = 1; i <= num; i++)
+        if (num >= 10 && num <= 20)
         {
-            factorial *= i;
+            Console.WriteLine("Está en el rango.");
         }
-
-        Console.WriteLine($"Resultado: {factorial}");
+        else
+        {
+            Console.WriteLine("Fuera del rango.");
+        }
     }
 }
