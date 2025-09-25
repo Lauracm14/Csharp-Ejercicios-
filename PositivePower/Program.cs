@@ -2,18 +2,20 @@
 {
     static void Main()
     {
-        Console.Write("Ingrese su salario anual: ");
-        double salario = double.Parse(Console.ReadLine() ?? "0");
+        Console.Write("Ingrese el primer número: ");
+        int num1 = int.Parse(Console.ReadLine() ?? "0");
 
-        if (salario > 12000)
+        Console.Write("Ingrese el segundo número: ");
+        int num2 = int.Parse(Console.ReadLine() ?? "1"); // evitamos división por 0
+
+        if (num2 == 0)
         {
-            double excedente = salario - 12000;
-            double impuesto = excedente * 0.15;
-            Console.WriteLine($"Resultado: {impuesto}");
+            Console.WriteLine("No se puede dividir entre 0.");
         }
         else
         {
-            Console.WriteLine("No debe impuestos.");
+            int residuo = num1 % num2;
+            Console.WriteLine($"Resultado: {residuo}");
         }
     }
 }
